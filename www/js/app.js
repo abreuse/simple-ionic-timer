@@ -5,6 +5,33 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 
+.controller('TimerCtrl', function ($scope, $timeout, $interval) {
+
+  $scope.startTimer = function (time) {
+    var decount;
+
+    if($scope.timeLeft !== 0)
+      $interval.cancel(decount);
+
+    $scope.timeLeft = time;
+    decount = $interval(function () {
+      $scope.timeLeft--;
+    }, 1000, time);
+  };
+
+  var audio = new Audio('beep-low.mp3');
+
+  $scope.playEndingSound = function () {
+    playSound()
+    $interval(playSound, 1000, 2);
+  }
+
+  var playSound = function () {
+    audio.play();
+  }
+
+})
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
