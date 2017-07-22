@@ -1,26 +1,24 @@
-Ionic App Base
-==============
+Simple Ionic Timer
+==================
 
-A starting project for Ionic that optionally supports using custom SCSS.
+An ionic application.
+A simple timer with an ending beeping sound.
 
 ## Using this project
 
-We recommend using the [Ionic CLI](https://github.com/ionic-team/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
-
+**Android**
 ```bash
 $ npm install -g ionic cordova
+$ ionic cordova build android
+$ ionic cordova run android
 ```
 
-Then run: 
-
+**IOS**
 ```bash
-$ ionic start myProject tabs --type=ionic1 --cordova
+$ npm install -g ionic cordova
+$ ionic cordova build ios
 ```
 
-More info on this can be found on the Ionic [Getting Started](https://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/ionic-team/ionic-cli) repo.
+Then, deploy with XCode.
 
-## Issues
-
-Issues have been disabled on this repo. If you do find an issue or have a question, consider posting it on the [Ionic Forum](https://forum.ionicframework.com/). If there is truly an error, follow our guidelines for [submitting an issue](https://ionicframework.com/submit-issue/) to the main Ionic repository.
+![Simple timer](https://image.noelshack.com/fichiers/2017/29/7/1500765326-capture-d-ecran-2017-07-23-a-01-15-12.png)
